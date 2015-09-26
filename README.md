@@ -1,19 +1,12 @@
 # Calculation
 
-**TODO: Add description**
+A simple Elixir/OTP calculation server, created as an exercise following the Erlang/OTP/Elixir/Phoenix class taught by Norberto Ortigoza ([@hiphoox](https://twitter.com/hiphoox)) hosted by [@HackerFounderSV](https://twitter.com/HackerFounderSV) at [@hackerdojo](https://twitter.com/hackgerdojo).
 
-## Installation
+It maintains state so each operation works on the current value, rather than passing in two values. 
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+Since the above approach needs to start somewhere, a "baseline" value is set on server instance creation. The current value can be reset to the baseline, or the current and baseline can be reset to a new value.
 
-  1. Add calculation to your list of dependencies in mix.exs:
+Next in line: 
 
-        def deps do
-          [{:calculation, "~> 0.0.1"}]
-        end
-
-  2. Ensure calculation is started before your application:
-
-        def application do
-          [applications: [:calculation]]
-        end
+* exploring the `doctest` macro
+* eliminate the explicit `GenServer.call()`s 
